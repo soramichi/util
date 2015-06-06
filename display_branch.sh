@@ -1,4 +1,4 @@
-ret=`git branch --contains=HEAD --no-color 2>/dev/null`
+ret=`git branch 2>/dev/null | grep "*"`
 
 if [ "$?" == "0" ]; then
     branch=`echo "$ret" | cut -d ' ' -f 2`
